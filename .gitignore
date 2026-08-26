@@ -9,6 +9,10 @@ pnpm-lock.yaml
 .env.local
 .env.*.local
 
+# Chat exports / plaintext history
+logs/
+chat-logs/
+
 # Logs
 *.log
 npm-debug.log*
