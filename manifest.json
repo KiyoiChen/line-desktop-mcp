@@ -1,35 +1,36 @@
 {
   "manifest_version": "0.2",
-  "name": "line-desktop-mcp",
-  "display_name": "LINE Desktop MCP",
-  "version": "1.0.21",
-  "description": "MCP Server for LINE Desktop Automation via GUI scripting",
+  "name": "line-desktop-mcp-safe",
+  "display_name": "LINE Desktop MCP Safe",
+  "version": "1.1.2-safe.1",
+  "description": "Hardened, read-only-by-default LINE Desktop MCP fork",
   "author": {
-    "name": "Geoffrey Wang",
-    "url": "https://github.com/dtwang"
+    "name": "Geoffrey Wang (upstream), hardened fork maintained by KiyoiChen",
+    "url": "https://github.com/KiyoiChen/line-desktop-mcp"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/dtwang/line-desktop-mcp"
+    "url": "https://github.com/KiyoiChen/line-desktop-mcp"
   },
-  "homepage": "https://github.com/dtwang/line-desktop-mcp#readme",
-  "support": "https://github.com/dtwang/line-desktop-mcp/issues",
+  "homepage": "https://github.com/KiyoiChen/line-desktop-mcp",
+  "support": "https://github.com/KiyoiChen/line-desktop-mcp/issues",
   "keywords": [
     "mcp",
     "line",
     "automation",
     "gui",
-    "applescript",
-    "desktop"
+    "desktop",
+    "security",
+    "read-only"
   ],
   "server": {
     "type": "node",
     "entry_point": "src/server.js",
     "mcp_config": {
-      "command": "npx",
+      "command": "node",
       "args": [
-        "line-desktop-mcp@latest"
+        "src/server.js"
       ]
     }
   },
